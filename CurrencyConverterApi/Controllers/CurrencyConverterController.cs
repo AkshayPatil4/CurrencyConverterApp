@@ -10,14 +10,14 @@ namespace CurrencyConverterApi.Controllers
         [HttpGet("convertToWords")]
         public ActionResult<string> ConvertToWords(string amountStr)
         {
-            // Replace commas with periods to ensure correct parsing
+            // Replacement commas with periods to ensure correct parsing
             decimal amount;
             if (!decimal.TryParse(amountStr.Replace(",", "."), out amount) || amount < 0 || amount > 999999999999999.99m)
             {
                 return BadRequest("Invalid amount. Please provide a value between 0 and 999,999,999,999,999.99");
             }
 
-            // Extract trillions, billions, millions, thousands, dollars, and cents from the input amount
+            // Extraction of trillions, billions, millions, thousands, dollars, and cents from the input amount
             long trillions = (long)Math.Floor(amount / 1000000000000);
             long billions = (long)Math.Floor((amount - trillions * 1000000000000) / 1000000000);
             long millions = (long)Math.Floor((amount - trillions * 1000000000000 - billions * 1000000000) / 1000000);
@@ -25,7 +25,7 @@ namespace CurrencyConverterApi.Controllers
             long dollars = (long)(amount - trillions * 1000000000000 - billions * 1000000000 - millions * 1000000 - thousands * 1000);
             int cents = (int)((amount - trillions * 1000000000000 - billions * 1000000000 - millions * 1000000 - thousands * 1000 - dollars) * 100);
 
-            // Handle excess cents
+            // Handling excess cents
             if (cents > 99)
             {
                 dollars += cents / 100;
@@ -34,7 +34,7 @@ namespace CurrencyConverterApi.Controllers
 
             string result = "";
 
-            // Convert trillions, billions, millions, thousands, dollars, and cents to words
+            // Conversion trillions, billions, millions, thousands, dollars, and cents to words
             if (trillions > 0)
             {
                 result += $"{NumberToWords(trillions)} trillion ";
@@ -83,7 +83,7 @@ namespace CurrencyConverterApi.Controllers
             return result.Trim();
         }
 
-        // Convert a number to words
+        // Conversion a number to words
         private string NumberToWords(long number)
         {
             if (number == 0)
@@ -97,14 +97,14 @@ namespace CurrencyConverterApi.Controllers
 
             string words = "";
 
-            // Convert hundreds
+            // Conversion hundreds
             if ((number / 100) > 0)
             {
                 words += units[number / 100] + " hundred ";
                 number %= 100;
             }
 
-            // Convert tens and ones
+            // Conversion tens and ones
             if (number > 0)
             {
                 if (words != "")
