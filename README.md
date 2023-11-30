@@ -18,7 +18,7 @@ The Currency Converter project provides a simple and user-friendly interface for
 
 ### Frontend
 
-- **Angular:** The frontend of the project is built using Angular, a powerful and widely-used web application framework.
+- **Angular:** The front end of the project is built using Angular, a powerful and widely-used web application framework.
 
 - **Angular Material:** Angular Material is employed for styling, ensuring a consistent and visually appealing user interface.
 
@@ -29,7 +29,8 @@ The Currency Converter project provides a simple and user-friendly interface for
 1. Navigate to the `CurrencyConverterApi` directory.
 2. Run the ASP.NET Core application.
 
-bash :: dotnet run
+bash :
+dotnet run
 The API will be accessible at http://localhost:5108.
 
 Running the Angular App
@@ -37,10 +38,12 @@ Navigate to the CurrencyConverterApp directory.
 
 Install dependencies.
 
-bash:: npm install
+bash:
+npm install
 Run the Angular application.
 
-bash:: ng serve
+bash:
+ng serve
 The Angular app will be available at http://localhost:4200.
 
 Accessing the Application
