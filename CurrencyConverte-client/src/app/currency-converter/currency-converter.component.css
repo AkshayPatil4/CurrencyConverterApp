@@ -1,0 +1,21 @@
+.page-container {
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  
+  .container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-left: 1rem;
+  }
+  
