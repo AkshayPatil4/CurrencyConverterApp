@@ -47,8 +47,10 @@ The Currency Converter project provides a simple and user-friendly interface for
 ### Running the Angular App
 1. Navigate to the CurrencyConverterApp directory.
 2. Install dependencies.
+   ```bash
    npm install
 3. Run the Angular application.
+   ```bash
    ng serve
    
 ### Accessing the Application
