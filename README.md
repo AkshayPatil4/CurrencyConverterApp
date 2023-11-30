@@ -13,7 +13,7 @@ Currency Converter is a web application that allows users to convert monetary am
   - [Accessing the Application](#accessing-the-application)
 - [API Endpoint](#api-endpoint)
 - [Issues and Contributions](#issues-and-contributions)
-- [License](#license)
+
 
 ## Overview
 
@@ -56,11 +56,11 @@ The Currency Converter project provides a simple and user-friendly interface for
 ### Accessing the Application
 Open a web browser and go to http://localhost:4200 to use the Currency Converter.
 
-###API Endpoint
+### API Endpoint
 Convert to Words:
 1. Endpoint: /api/CurrencyConverter/convertToWords
 2. Method: GET
 3. Parameters: amountStr (string) - Decimal amount to convert to words.
    
-###Issues and Contributions
+### Issues and Contributions
 If you encounter any issues or have suggestions for improvements, feel free to open an issue or contribute to the project.
