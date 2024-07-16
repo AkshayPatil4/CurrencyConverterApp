@@ -1,66 +1,54 @@
-# Currency Converter
-
-Currency Converter is a web application that allows users to convert monetary amounts into words. The project consists of a backend API built with Microsoft's ASP.NET Core and a frontend developed using Angular with Angular Material for styling.
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Usage](#usage)
-  - [Running the API](#running-the-api)
-  - [Running the Angular App](#running-the-angular-app)
-  - [Accessing the Application](#accessing-the-application)
-- [API Endpoint](#api-endpoint)
-- [Issues and Contributions](#issues-and-contributions)
+# Currency Converter 💲
 
 
-## Overview
+Convert numerical monetary amounts into their equivalent written form (e.g., "123.45" to "One hundred twenty-three dollars and forty-five cents"). This application comprises an ASP.NET Core backend API for conversion logic and an Angular frontend with Angular Material for a polished user experience.
 
-The Currency Converter project provides a simple and user-friendly interface for converting monetary amounts into words. The backend API, built with ASP.NET Core, handles the conversion logic, while the Angular frontend ensures a seamless and interactive user experience.
+## 💡 Key Features
 
-## Features
+* **Accurate Conversion:** Accurately converts decimal amounts to words, including dollars and cents.
+* **User-Friendly Interface:** Provides a clean and intuitive interface for easy input and output display.
+* **Angular Material Styling:** Utilizes Angular Material for a modern and visually appealing design.
+* **RESTful API:** Exposes a simple API endpoint for seamless integration with other applications.
 
-- **Convert to Words:** The API endpoint `/api/CurrencyConverter/convertToWords` takes a decimal amount as input and returns the equivalent amount in words.
+## 🚀 Getting Started
 
-## Technologies Used
+### 1. Backend (ASP.NET Core)
 
-### Backend
+* **Prerequisites:**
+    * .NET Core SDK: Ensure you have the .NET Core SDK installed on your machine.
 
-- **ASP.NET Core:** The backend of the Currency Converter API is developed using ASP.NET Core, providing a robust and scalable foundation.
+* **Running the API:**
+    ```bash
+    cd CurrencyConverterApi 
+    dotnet run
+    ```
+    The API will typically run on `http://localhost:5000` (or `https://localhost:5001`).
 
-### Frontend
+### 2. Frontend (Angular)
 
-- **Angular:** The frontend of the project is built using Angular, a powerful and widely-used web application framework.
+* **Prerequisites:**
+    * Node.js and npm: Ensure you have Node.js and npm installed on your machine.
 
-- **Angular Material:** Angular Material is employed for styling, ensuring a consistent and visually appealing user interface.
+* **Running the Angular App:**
+    ```bash
+    cd CurrencyConverterApp
+    npm install
+    ng serve
+    ```
+    The Angular app will be available at `http://localhost:4200` in your browser.
 
-## Usage
+## 🌐 Usage
 
-### Running the API
+1. **Access the App:** Open your web browser and navigate to `http://localhost:4200/`.
+2. **Enter Amount:** Type the decimal amount you want to convert in the input field.
+3. **Click "Convert":** The application will display the converted amount in words.
 
-1. Navigate to the `CurrencyConverterApi` directory.
-2. Run the ASP.NET Core application.
+## 🛠️ API Endpoint
 
-   ```bash
-   dotnet run
-### Running the Angular App
-1. Navigate to the CurrencyConverterApp directory.
-2. Install dependencies.
-   ```bash
-   npm install
-3. Run the Angular application.
-   ```bash
-   ng serve
-   
-### Accessing the Application
-Open a web browser and go to http://localhost:4200 to use the Currency Converter.
+* **Convert to Words:**
+    * **Endpoint:** `/api/CurrencyConverter/convertToWords`
+    * **Method:** `GET`
+    * **Parameter:** `amountStr` (string) - The decimal amount to be converted.
 
-### API Endpoint
-Convert to Words:
-1. Endpoint: /api/CurrencyConverter/convertToWords
-2. Method: GET
-3. Parameters: amountStr (string) - Decimal amount to convert to words.
-   
-### Issues and Contributions
-If you encounter any issues or have suggestions for improvements, feel free to open an issue or contribute to the project.
+## 🤝 Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
